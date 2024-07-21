@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a,
+i,
+li {
+    cursor: pointer;
+}
+
+
+body {
+    color: white;
+    background: #0d0d0d;
+}
+
+ul li a {
+    font-family: "Noto Sans", sans-serif;
+    color: #ddd5d8;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ul li:hover {
+
+    color: brown;
+}
+
+.copyrightsContainer p {
+
+    font-family: "Noto Sans", sans-serif;
+    color: rgb(153, 153, 153);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.home img {
+    height: 750px;
+    width: 300px;
+    object-fit: cover;
+
+
+}
+
+.navbar-menu {
+    z-index: 99999999999;
+}
+
+.nav-tab {
+    background-color: #0d0d0d !important;
+}
+
+.rate {
+    color: #ffc107;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    /* top: 100%; */
+    top: -100%;
+    background-color: transparent;
+    transition: all 0ms;
+    color: white;
+}
+
+.card:hover .layer {
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+
+}
+
+
+
+.card img {
+    transition: all 0.5s;
+}
+
+.card:hover img {
+    scale: 1.1;
+    filter: blur(2px);
+
+}
+
+.nameOfMovie {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.descOfMovie,
+.releaseDate {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ededed;
+}
+
+.circleRate {
+    border: 2px green solid;
+    display: inline-block;
+    /* width: fit-content;
+    height: fit-content; */
+    background-color: transparent;
+    border-radius: 50%;
+
+}
+
+.card img {
+    width: 100%;
+    height: 500px;
+    object-fit: inherit;
+}
+
+
+/* spinner */
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 10px solid;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+    0% {
+        border-color: white rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+    }
+
+    33% {
+        border-color: white white rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+    }
+
+    66% {
+        border-color: white white white rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        border-color: white white white white;
+    }
+}
+
+.loading {
+    position: fixed;
+    inset: 0;
+    background-color: #0d0d0d;
+    z-index: 9999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.col-lg-6 .form-control {
+    border: none;
+    border-radius: 0 !important;
+    box-shadow: none;
+}
+
+.col-lg-6 input {
+    border-bottom: 2px solid white !important;
+    caret-color: white;
+    color: white;
+
+}
+
+
+.col-lg-6 .form-control::placeholder {
+    color: #6c747e;
+    text-align: center;
+
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.btn{
+    background-color: black;
+    color: white;
+    padding-inline: 25px;
+    
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.alert{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+.searchContainer .form-control{
+    box-shadow: none;
+    border: none;
+}
+
+
+
+.searchContainer input{
+    caret-color: white;
+    color: white;
+}
+
+.searchContainer .form-control {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+}
+
+
+.back{
+    padding: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 5%;
+    right: 20px;
+    background-color: black;
+    border-radius: 50%;
+    display: none;
+    transition: all 0 ease-in;
+}
+
+
