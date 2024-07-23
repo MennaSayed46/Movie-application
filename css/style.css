@@ -122,8 +122,8 @@ ul li:hover {
 
 .card img {
     width: 100%;
-    height: 500px;
-    object-fit: inherit;
+    height: 650px;
+    object-fit: cover;
 }
 
 
