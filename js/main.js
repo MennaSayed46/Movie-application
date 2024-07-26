@@ -363,22 +363,15 @@ submitBtn.addEventListener("click", function (e) {
 //search
 
 
-function search() {
-    let searchResult = [];
-    let allData = [...popular, ...toprating, ...upcoming, ...trending, ...nowPlaying];
-    console.log(allData);
-    for (let i = 0; i < allData.length; i++) {
-        if (
-
-            (allData[i].title && allData[i].title.toLowerCase().includes(searchInput.value.toLowerCase())) ||
-            (allData[i].name && allData[i].name.toLowerCase().includes(searchInput.value.toLowerCase()))
-        ) {
-            searchResult.push(allData[i])
-        }
-
-    }
+async function search() {
+    const query = searchInput.value ;
+    let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=eba8b9a7199efdcb0ca1f96879b83c44&query=${encodeURIComponent(query)}`);
+    let data = await response.json();
+    let searchResult = data.results;
+    // console.log(searchResult);
     forLoop(searchResult);
 }
+
 
 searchInput.addEventListener('input', search);
 
